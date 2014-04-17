@@ -299,7 +299,8 @@ button:focus {
 .css .declaration * {
 	display: inline-block;
 }
-.css .property {
+.css .property,
+.css .declaration-block .statement {
 	margin-left: 2em;
 	margin-left: 2rem;
 	margin-right: .5em;
@@ -307,6 +308,10 @@ button:focus {
 	display: block;
 	float: left;
 	position: relative;
+}
+.css .declaration-block .declaration-block .property {
+	margin-left: 2em;
+	margin-left: 2rem;
 }
 .css .property::after {
 	display: block;
@@ -378,6 +383,25 @@ button:focus {
 }
 .css .at-rule::after {
 	content: ";";
+}
+.css .at-rule.statement::after {
+        content: "";
+}
+.css .query-list {
+    display: inline;
+}
+    .css .query-list::before {
+        content: "(";
+    }
+    .css .query-list::after {
+        content: ")";
+    }
+.css .media-query * {
+	display: inline;
+        float: none;
+}
+.css .media-query .property {
+	margin-left: 0;
 }
 .css .string::before,
 .css .string::after {
